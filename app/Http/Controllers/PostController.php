@@ -53,7 +53,7 @@ class PostController extends Controller
         //     abort(403);
         // }
 
-        Gate::authorize('update-post', $post);
+        Gate::authorize('update', $post);
 
         return view('post.edit', compact('post'));
     }
