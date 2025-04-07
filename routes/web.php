@@ -26,4 +26,4 @@ Route::group(['middleware' => ['auth']], function () {
 require __DIR__ . '/auth.php';
 
 // Post Route
-Route::resource('/post', PostController::class)->middleware(['auth', 'can:update']);
+Route::resource('/post', PostController::class)->middleware('auth');
